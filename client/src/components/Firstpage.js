@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Firstpage.css";
 import "./Secondpage";
-import Discordsvg from "./Discordsvg";
-import Twittersvg from "./Twittersvg";
-import Instagramsvg from "./Instagramsvg";
 import myvideo from "./videos/first.mp4";
 import img1 from "./images/first-image-min.png";
 import img2 from "./images/second-image-min.png";
@@ -153,15 +150,6 @@ function Firstpage() {
         <div className="column1">
           <h2 className="column1-heading">Contact Us</h2>
           <p className="column1-para">To be Updated</p>
-        </div>
-
-        <div className="column2">
-          <h2 className="column2-text">Get involved</h2>
-          <div className="social-icons">
-            <Discordsvg />
-            <Twittersvg />
-            <Instagramsvg />
-          </div>
         </div>
 
         <div className="column3">

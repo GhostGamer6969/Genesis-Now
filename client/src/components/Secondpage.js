@@ -6,11 +6,6 @@ import { useState, useEffect } from "react";
 import "./Secondfile.css";
 import "./FileUpload.css";
 import FileUpload from "./FileUpload";
-import Modal from "./Modal";
-import Display from "./Display";
-import Discordsvg from "./Discordsvg";
-import Twittersvg from "./Twittersvg";
-import Instagramsvg from "./Instagramsvg";
 import SecureUpload from "./images/Secure Upload.png";
 import ShareShield from "./images/Share Shield.png";
 import AccessLock from "./images/Acesslock.png"; 
@@ -145,14 +140,6 @@ const Secondpage = () => {
           <p className="column1-para">To be Updated </p>
         </div>
 
-        <div className="column2">
-          <h2 className="column2-text">Get involved</h2>
-          <div className="social-icons">
-            <Discordsvg />
-            <Twittersvg />
-            <Instagramsvg />
-          </div>
-        </div>
 
         <div className="column3">
           <p className="Column3-text">

@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Navbar from "./Navbar";
 import "./AccessList.css";
-import Discordsvg from "./Discordsvg";
-import Twittersvg from "./Twittersvg";
-import Instagramsvg from "./Instagramsvg";
 
 const AccessListPage = ({ contract }) => {
   const [accessList, setAccessList] = useState([]);
@@ -115,15 +112,7 @@ const AccessListPage = ({ contract }) => {
           <p className="column1-para">To be Updated</p>
         </div>
 
-        <div className="column2">
-          <h2 className="column2-text">Get involved</h2>
-          <div className="social-icons">
-            <Discordsvg />
-            <Twittersvg />
-            <Instagramsvg />
-          </div>
-        </div>
-
+        
         <div className="column3">
           <p className="Column3-text">
             © 2023 Genesis. All rights reserved

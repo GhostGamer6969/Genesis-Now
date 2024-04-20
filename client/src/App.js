@@ -5,6 +5,7 @@ import Firstpage from "./components/Firstpage";
 import Secondpage from "./components/Secondpage";
 import AccessList from "./components/AccessList";
 import MyUpload from "./components/MyUpload";
+import Research from "./components/Research";
 
 
 
@@ -147,7 +148,9 @@ const App = () => {
           element={<AccessList contract={contract} />}
         />
         <Route path="/Working" element={<Working/>} />
+        <Route path="/research" element={<Research/>} />
         <Route path="/myupload" element={<MyUpload/>} />
+
 
 
       </Routes>

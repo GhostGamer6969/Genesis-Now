@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
-import Upload from "./artifacts/contracts/Upload.sol/Upload.json"; // Add this import
+import Upload from "./artifacts/contracts/Upload.sol/Upload.json"; 
 import Navbar from "./Navbar";
 import "./Secondfile.css";
 import "./FileUpload.css";
-import FileUpload from "./FileUpload";
-import Modal from "./Modal";
-import Discordsvg from "./Discordsvg";
-import Twittersvg from "./Twittersvg";
-import Instagramsvg from "./Instagramsvg";
-import SecureUpload from "./images/Secure Upload.png";
-import ShareShield from "./images/Share Shield.png";
-import AccessLock from "./images/Acesslock.png";
 
 const MyUpload = () => {
   const [account, setAccount] = useState("");

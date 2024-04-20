@@ -4,9 +4,7 @@ import "./Working.css";
 import image1 from "./images/first-image-min.png";
 import image2 from "./images/second-image-min.png";
 import image3 from "./images/third-image-min.png";
-import Discordsvg from "./Discordsvg";
-import Twittersvg from "./Twittersvg";
-import Instagramsvg from "./Instagramsvg";
+
 
 
 const Working = () => {
@@ -64,15 +62,6 @@ const Working = () => {
                 <div className="column">
                     <h2 className="column1-heading">Contact Us</h2>
                     <p className="column1-para">To be Updated</p>
-                </div>
-
-                <div className="column">
-                    <h2 className="column2-text">Get involved</h2>
-                    <div className="social-icons">
-                        <Discordsvg />
-                        <Twittersvg />
-                        <Instagramsvg />
-                    </div>
                 </div>
 
                 <div className="column">
