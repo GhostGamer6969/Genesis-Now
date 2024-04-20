@@ -6,8 +6,7 @@ import './Secondfile.css';
 import './FileUpload.css';
 
 function Ownership() {
-    };
-
+    
     return (
         <>
             <Navbar />

@@ -1,4 +1,4 @@
-# Decentralized File Storage System
+# GENESIS: Decentralized File Storage System
 
 Web-based application for secure file storage on the blockchain
 
