@@ -63,6 +63,7 @@ function Payment() {
             });
 
             alert('Transfer successful!');
+            
         } catch (error) {
             console.error('Error transferring funds:', error);
             alert('Error transferring funds. Please try again.');
@@ -88,7 +89,7 @@ function Payment() {
                 <br />
                 <br />
             </form>
-            <button onClick={transfer} id="transferButton" disabled={transferButtonDisabled}>
+            <button onClick={transfer} id="transferButton" className="hero-button-text" disabled={transferButtonDisabled}>
                 Transfer
             </button>
             </div>

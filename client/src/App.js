@@ -7,7 +7,7 @@ import AccessList from "./components/AccessList";
 import MyUpload from "./components/MyUpload";
 import Payment from "./components/Payment";
 import Ownership from "./components/Ownership";
-import Lisence from "./components/Lisence";
+import License from "./components/License";
 
 
 
@@ -151,6 +151,9 @@ const App = () => {
         />
         <Route path="/Working" element={<Working/>} />
         <Route path="/ownership" element={<Ownership/>} />
+        <Route path="/payment" element={<Payment/>} />
+        <Route path="/license" element={<License/>} />
+
         <Route path="/myupload" element={<MyUpload/>} />
 
 
