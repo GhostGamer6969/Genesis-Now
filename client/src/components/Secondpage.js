@@ -130,23 +130,6 @@ const Secondpage = () => {
         </div>
       </div>
 
-        {/* <Display contract={contract} account={account}></Display> */}
-
-      
-
-      {/* <div className="footer-section">
-        <div className="column1">
-          <h2 className="column1-heading">Contact Us</h2>
-          <p className="column1-para">To be Updated </p>
-        </div>
-
-
-        <div className="column3">
-          <p className="Column3-text">
-            © 2023 Genesis. All rights reserved
-          </p>
-        </div>
-      </div> */}
     </>
   );
 };

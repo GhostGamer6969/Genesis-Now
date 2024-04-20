@@ -115,7 +115,7 @@ const AccessListPage = ({ contract }) => {
         
         <div className="column3">
           <p className="Column3-text">
-            © 2023 Genesis. All rights reserved
+            © 2024 Genesis. All rights reserved
           </p>
         </div>
       </div>

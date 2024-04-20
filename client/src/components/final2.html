@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metamask Transfer</title>
+</head>
+<body>
+    <h1>Metamask Transfer</h1>
+    <button onclick="connectMetamask()">Connect Metamask</button><br><br>
+    <div id="walletAddress"></div><br>
+    <form action = '#'>
+    <label for="receiverAddress">Recipient Address:</label>
+    <input type="text" id="receiverAddress"><br><br>
+    <label for="amount">Amount to Transfer (in finney):</label>
+    <input type="number" id="amount" min="0"><br><br>
+    </form>
+    <button onclick="transfer()" id="transferButton" disabled>Transfer</button>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script>
+
+        const form = document.querySelector('form');
+        const amount = document.querySelector('#amount');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            console.log(amount.value*10000000000000000);
+        })
+        async function connectMetamask() {
+            // Check if Metamask is installed
+            if (typeof window.ethereum === 'undefined') {
+                alert("Please install Metamask to use this feature.");
+                return;
+            }
+
+            // Request account access if needed
+            await window.ethereum.enable();
+
+            // Display wallet address
+            const walletAddress = document.getElementById('walletAddress');
+            walletAddress.innerText = 'Connected Wallet Address: ' + window.ethereum.selectedAddress;
+
+            // Enable transfer button
+            document.getElementById('transferButton').disabled = false;
+            alert('Metamask connected!');
+        }
+
+        async function transfer() {
+            // Check if Metamask is connected
+            if (typeof window.ethereum === 'undefined' || !window.ethereum.selectedAddress) {
+                alert("Please connect Metamask first.");
+                return;
+            }
+
+            const web3 = new Web3(window.ethereum);
+            const contractAddress = '0xb5046Fbe93567b0CC19917e744220B4CA567c439';
+            const contractABI = [
+                {
+                    "inputs": [
+                        {
+                            "internalType": "address payable",
+                            "name": "_to",
+                            "type": "address"
+                        }
+                    ],
+                    "name": "sendViaTransfer",
+                    "outputs": [],
+                    "stateMutability": "payable",
+                    "type": "function"
+                }
+            ];
+
+            const contract = new web3.eth.Contract(contractABI, contractAddress);
+            const receiverAddress = document.getElementById('receiverAddress').value;
+            // const amountInFinney = document.getElementById('amount').value;
+            // const amountInEther = web3.utils.fromWei(amountInFinney, 'finney');
+            const amountInEther = document.getElementById('amount').value ;
+            const amountInFinney = amount;
+
+
+            // Transfer Ether
+            await contract.methods.sendViaTransfer(receiverAddress).send({
+                from: window.ethereum.selectedAddress,
+                value: web3.utils.toWei(amountInEther, 'ether')
+            });
+
+            alert('Transfer successful!');
+        }
+    </script>
+</body>
+</html>

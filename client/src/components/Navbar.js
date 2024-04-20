@@ -33,8 +33,8 @@ const Navbar = () => {
         <Link to="/Secondpage" className="item">
           <li>Upload</li>
         </Link>
-        <Link to="/research" className="item">
-          <li>Research</li>
+        <Link to="/ownership" className="item">
+          <li>Research Ownership</li>
         </Link>
         <Link to="/MyUpload" className="item">
           <li>View</li>
