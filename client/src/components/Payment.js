@@ -64,6 +64,7 @@ function Payment() {
 
             alert('Transfer successful!');
             
+            
         } catch (error) {
             console.error('Error transferring funds:', error);
             alert('Error transferring funds. Please try again.');
