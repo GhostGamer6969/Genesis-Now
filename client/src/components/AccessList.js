@@ -68,7 +68,7 @@ const AccessListPage = ({ contract }) => {
             id = "accesslist-input"
             type="text"
             name="email"
-            placeholder="Enter Address"
+            placeholder="Enter Wallet Address"
           />
           <button type="submit" className="accesslist-button">
             Allow

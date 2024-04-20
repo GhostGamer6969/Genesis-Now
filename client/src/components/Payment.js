@@ -63,7 +63,7 @@ function Payment() {
             });
 
             alert('Transfer successful!');
-            
+            window.location.pathname='/license'
             
         } catch (error) {
             console.error('Error transferring funds:', error);
