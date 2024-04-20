@@ -18,6 +18,8 @@ The Decentralized File Storage System is a web-based application built on web3 t
 
 - **Privacy and Security**: The system provides privacy and security by allowing users to disallow specific addresses from accessing their files, maintaining control over shared content.
 
+- **Preventing Playgerism**: The system prevents players from tampering with the uploaded files, ensuring data integrity and security.
+
 ## Tech Stack
 
 - Front-end: HTML, CSS, JavaScript
